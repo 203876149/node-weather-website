@@ -2,7 +2,7 @@ console.log('Client side javascript file is loaded!')
 const searchWeather = (location) => {
     massage1.textContent = 'Loading...'
     massage2.textContent = ''
-    fetch(`http://localhost:3000/weather?address=${location}`).then(res => {
+    fetch(`/weather?address=${location}`).then(res => {
     res.json().then(data => {
         if (data.error) {
             massage1.textContent = data.error
